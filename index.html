@@ -1,0 +1,778 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Worker's Resource Hub - Interview Questions & Comprehensive Guide</title>
+    <style>
+        :root {
+            --primary: #487ac9;
+            --primary-dark: #3a629f;
+            --secondary: #f5f7fa;
+            --accent: #e6eef9;
+            --text: #333;
+            --text-light: #666;
+            --success: #4caf50;
+            --warning: #ff9800;
+            --danger: #f44336;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--secondary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            color: var(--text-light);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .tab-button {
+            padding: 12px 25px;
+            background-color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            transition: all 0.3s;
+            border-radius: 30px;
+            margin: 0 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tab-button:hover {
+            background-color: var(--accent);
+            color: var(--primary);
+        }
+        
+        .tab-button.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        h3 {
+            color: var(--primary-dark);
+            margin: 15px 0;
+            font-size: 1.3rem;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        
+        .question {
+            background-color: var(--accent);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .question:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(72, 122, 201, 0.2);
+        }
+        
+        .question h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .question h3::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .question.active h3::after {
+            content: '−';
+        }
+        
+        .answer {
+            display: none;
+            padding-top: 15px;
+            border-top: 1px solid #ddd;
+            margin-top: 15px;
+        }
+        
+        .question.active .answer {
+            display: block;
+        }
+        
+        .guide-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .guide-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(72, 122, 201, 0.15);
+        }
+        
+        .guide-section h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .guide-section h3::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .guide-section.active h3::after {
+            content: '−';
+        }
+        
+        .guide-content {
+            display: none;
+            padding-top: 20px;
+            margin-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        
+        .guide-section.active .guide-content {
+            display: block;
+        }
+        
+        ul, ol {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .key-phrase {
+            font-style: italic;
+            color: var(--primary-dark);
+            display: block;
+            margin: 15px 0;
+            padding: 10px;
+            background-color: var(--accent);
+            border-radius: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background-color: rgba(230, 238, 249, 0.5);
+        }
+        
+        .alert {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        
+        .alert-info {
+            background-color: #e3f2fd;
+            color: #0d47a1;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .alert-warning {
+            background-color: #fff8e1;
+            color: #ff8f00;
+            border-left: 5px solid #ffc107;
+        }
+        
+        .latest-update {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 5px solid var(--success);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .download-btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(72, 122, 201, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .tab-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .tab-button {
+                margin: 5px 0;
+            }
+            
+            .tab-content {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Care Worker's Resource Hub</h1>
+            <p class="subtitle">Your Complete Guide to Interview Preparation and Professional Development</p>
+            
+            <div class="tab-container">
+                <button class="tab-button active" onclick="openTab('interview-tab')">Interview Questions</button>
+                <button class="tab-button" onclick="openTab('guide-tab')">Comprehensive Guide</button>
+                <button class="tab-button" onclick="openTab('updates-tab')">Latest Updates</button>
+            </div>
+        </header>
+        
+        <!-- Interview Questions Tab -->
+        <div id="interview-tab" class="tab-content active">
+            <div class="section">
+                <h2>Essential Care Assistant Interview Questions</h2>
+                <p>Click on each question to reveal sample answers that demonstrate your expertise and compassion.</p>
+                
+                <div class="question" onclick="toggleQuestion(this)">
+                    <h3>1. Why do you want to be a care assistant?</h3>
+                    <div class="answer">
+                        <p>I've always enjoyed helping others and making a difference in people's lives. Being a care assistant allows me to support those who need help with daily tasks, and I find it very rewarding to build trusting relationships with the people I care for.</p>
+                    </div>
+                </div>
+                
+                <div class="question" onclick="toggleQuestion(this)">
+                    <h3>2. What qualities make a good care assistant?</h3>
+                    <div class="answer">
+                        <p>A good care assistant needs to be patient, compassionate, and reliable. It's also important to have good communication skills and to treat every individual with dignity and respect, regardless of their condition.</p>
+                    </div>
+                </div>
+                
+                <div class="question" onclick="toggleQuestion(this)">
+                    <h3>3. Can you describe a time you handled a difficult situation?</h3>
+                    <div class="answer">
+                        <p>In my previous role, a resident became very upset and refused to eat. I stayed calm, listened to their concerns, and discovered they were uncomfortable with a new routine. I worked with the team to adjust their schedule, and the resident became more cooperative. This showed me how important empathy and flexibility are in care.</p>
+                    </div>
+                </div>
+                
+                <div class="question" onclick="toggleQuestion(this)">
+                    <h3>4. How do you maintain a resident's dignity and privacy?</h3>
+                    <div class="answer">
+                        <p>I always knock before entering a room, explain what I'm going to do, and ask for their consent. When helping with personal care, I ensure the person is covered as much as possible and that they feel safe and respected.</p>
+                    </div>
+                </div>
+                
+                <div class="question" onclick="toggleQuestion(this)">
+                    <h3>5. How would you handle a medical emergency?</h3>
+                    <div class="answer">
+                        <p>First, I would stay calm, ensure the person is safe, and call for emergency help or follow the procedure in place. I'd inform my manager immediately and record the incident accurately once it's been handled.</p>
+                    </div>
+                </div>
+                
+                <div class="question" onclick="toggleQuestion(this)">
+                    <h3>6. Are you comfortable with personal care tasks?</h3>
+                    <div class="answer">
+                        <p>Yes, I understand that personal care is a vital part of the role. I approach it with professionalism and respect, always considering the person's preferences and comfort.</p>
+                    </div>
+                </div>
+                
+                <div class="question" onclick="toggleQuestion(this)">
+                    <h3>7. How do you manage stressful situations or emotional strain?</h3>
+                    <div class="answer">
+                        <p>I stay focused on the needs of the person I'm supporting and remind myself why I chose this career. I also talk with colleagues or my supervisor if needed, and make sure to take care of my own wellbeing outside of work.</p>
+                    </div>
+                </div>
+                
+                <div class="question" onclick="toggleQuestion(this)">
+                    <h3>8. What would you do if a client refused care?</h3>
+                    <div class="answer">
+                        <p>I would remain calm and try to understand their concerns. I'd offer reassurance and explain the importance of the care. If they still refuse, I would respect their wishes and report it to my supervisor so we could find a safe solution.</p>
+                    </div>
+                </div>
+                
+                <div class="question" onclick="toggleQuestion(this)">
+                    <h3>9. Do you have any experience working with vulnerable adults?</h3>
+                    <div class="answer">
+                        <p>Yes, in my previous role, I supported elderly residents with mobility, medication, and companionship. I learned how to adapt my approach depending on each individual's needs.</p>
+                    </div>
+                </div>
+                
+                <div class="question" onclick="toggleQuestion(this)">
+                    <h3>10. Why should we hire you for this role?</h3>
+                    <div class="answer">
+                        <p>I'm compassionate, hardworking, and committed to providing high-quality care. I understand the responsibilities of the role, and I'm confident I can support your team while offering kindness and respect to every client.</p>
+                    </div>
+                </div>
+                
+                <a href="#" class="download-btn" onclick="printContent('interview-tab')">Download Interview Questions</a>
+            </div>
+        </div>
+        
+        <!-- Comprehensive Guide Tab -->
+        <div id="guide-tab" class="tab-content">
+            <div class="section">
+                <h2>Comprehensive Guide for Care & Support Workers in the UK</h2>
+                <p>Click on each section to expand and learn more about essential aspects of care work.</p>
+                
+                <div class="guide-section" onclick="toggleGuide(this)">
+                    <h3>1. Handling Conflict Among Staff and Colleagues</h3>
+                    <div class="guide-content">
+                        <p><strong>Scenario:</strong> Disagreements between team members can disrupt care quality.</p>
+                        
+                        <h4>Steps to Resolve:</h4>
+                        <ol>
+                            <li><strong>Stay Calm & Professional</strong> – Avoid escalating emotions.</li>
+                            <li><strong>Listen Actively</strong> – Understand both sides without bias.</li>
+                            <li><strong>Mediate or Escalate</strong>
+                                <ul>
+                                    <li>If minor: Facilitate a respectful discussion.</li>
+                                    <li>If serious: Report to a <strong>senior manager</strong> or HR.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Document</strong> – Record the issue and steps taken.</li>
+                        </ol>
+                        
+                        <div class="key-phrase">
+                            "I would encourage open communication and focus on finding a solution that prioritizes the service user's care."
+                        </div>
+                        
+                        <div class="key-phrase">
+                            "If unresolved, I'd follow workplace policies and involve management."
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="guide-section" onclick="toggleGuide(this)">
+                    <h3>2. Dealing with Agitated Service Users</h3>
+                    <div class="guide-content">
+                        <p><strong>Scenario:</strong> A service user becomes upset or aggressive.</p>
+                        
+                        <h4>Actions to Take:</h4>
+                        <ol>
+                            <li><strong>Assess Safety</strong> – Ensure no immediate risk to yourself or others.</li>
+                            <li><strong>De-escalate</strong>
+                                <ul>
+                                    <li>Speak calmly, use non-threatening body language.</li>
+                                    <li>Offer choices (e.g., "Would you like to sit down or take a walk?").</li>
+                                </ul>
+                            </li>
+                            <li><strong>Identify Triggers</strong> – Pain? Frustration? Environmental factors?</li>
+                            <li><strong>Follow Care Plan</strong> – Check for specific de-escalation strategies.</li>
+                            <li><strong>Report & Record</strong> – Update the care plan if needed.</li>
+                        </ol>
+                        
+                        <div class="key-phrase">
+                            "I'd remain calm, reassure the individual, and use distraction techniques. If agitation persists, I'd review their care plan and consult a senior."
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="guide-section" onclick="toggleGuide(this)">
+                    <h3>3. Missing Information in a Care Plan</h3>
+                    <div class="guide-content">
+                        <p><strong>Scenario:</strong> A care plan lacks critical details (e.g., allergies, preferences).</p>
+                        
+                        <h4>Steps to Address:</h4>
+                        <ol>
+                            <li><strong>Do Not Assume</strong> – Never guess a service user's needs.</li>
+                            <li><strong>Check Records</strong> – Review other documents or ask colleagues.</li>
+                            <li><strong>Escalate</strong> – Inform the <strong>manager</strong> or nurse in charge immediately.</li>
+                            <li><strong>Update</strong> – Once confirmed, document the missing information.</li>
+                        </ol>
+                        
+                        <div class="key-phrase">
+                            <strong>Person-Centred Care</strong> – Tailoring support to the individual's needs.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="guide-section" onclick="toggleGuide(this)">
+                    <h3>4. Medication Administration: The 8 Rights</h3>
+                    <div class="guide-content">
+                        <p><strong>UK Best Practice:</strong></p>
+                        <ol>
+                            <li><strong>Right Person</strong> – Confirm identity (e.g., wristband, verbal check).</li>
+                            <li><strong>Right Medication</strong> – Double-check the label.</li>
+                            <li><strong>Right Dose</strong> – Measure accurately; never guess.</li>
+                            <li><strong>Right Time</strong> – Follow prescribed schedules strictly.</li>
+                            <li><strong>Right Route</strong> – Oral, topical, IV, etc.</li>
+                            <li><strong>Right Documentation</strong> – Record immediately after administration.</li>
+                            <li><strong>Right to Refuse</strong> – Respect the service user's choice (and report).</li>
+                            <li><strong>Right Response</strong> – Monitor for side effects.</li>
+                        </ol>
+                        
+                        <div class="alert alert-info">
+                            <strong>Common Interview Question:</strong><br>
+                            "What would you do if a service user refuses medication?"
+                        </div>
+                        
+                        <div class="key-phrase">
+                            "I'd respect their decision, reassure them, and report to my supervisor to explore alternatives."
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="guide-section" onclick="toggleGuide(this)">
+                    <h3>5. Duty of Care vs. Safeguarding</h3>
+                    <div class="guide-content">
+                        <p><strong>Duty of Care</strong> – Legal obligation to act in the service user's best interest.</p>
+                        <p><strong>Safeguarding</strong> – Protecting vulnerable adults from harm.</p>
+                        
+                        <h4>Responding to Abuse</h4>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Type of Abuse</th>
+                                    <th>Signs</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Physical</strong></td>
+                                    <td>Unexplained bruises</td>
+                                    <td>Report to manager, document injuries.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Psychological</strong></td>
+                                    <td>Fearfulness, withdrawal</td>
+                                    <td>Listen non-judgmentally; escalate.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Financial</strong></td>
+                                    <td>Missing belongings</td>
+                                    <td>Report to safeguarding lead.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Sexual</strong></td>
+                                    <td>Trauma, STIs</td>
+                                    <td>Contact authorities <em>immediately</em>.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="key-phrase">
+                            "I would follow the 'Whistleblowing' policy to report concerns confidentially."
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="guide-section" onclick="toggleGuide(this)">
+                    <h3>6. Glossary of UK Care Terms</h3>
+                    <div class="guide-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Term</th>
+                                    <th>Definition</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Service User</strong></td>
+                                    <td>Person receiving care/support.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Care Plan</strong></td>
+                                    <td>Document outlining a service user's needs/preferences.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Mental Capacity Act</strong></td>
+                                    <td>Law protecting decision-making rights.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Safeguarding Lead</strong></td>
+                                    <td>Designated person handling abuse cases.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>PRN Medication</strong></td>
+                                    <td>"As needed" medication (e.g., pain relief).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>DOLs</strong></td>
+                                    <td>Deprivation of Liberty Safeguards (for restrictive care).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="guide-section" onclick="toggleGuide(this)">
+                    <h3>7. Final Interview Tips</h3>
+                    <div class="guide-content">
+                        <ul>
+                            <li><strong>Use the STAR Method</strong> (Situation, Task, Action, Result) for scenario questions.</li>
+                            <li><strong>Emphasize Compliance</strong> – "I always follow policies and escalate uncertainties."</li>
+                            <li><strong>Show Empathy</strong> – "I prioritize dignity and respect in all interactions."</li>
+                        </ul>
+                        
+                        <div class="alert alert-warning">
+                            Remember to research the specific care provider before your interview and tailor your answers to their values and mission.
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" class="download-btn" onclick="printContent('guide-tab')">Download Comprehensive Guide</a>
+            </div>
+        </div>
+        
+        <!-- Latest Updates Tab -->
+        <div id="updates-tab" class="tab-content">
+            <div class="section">
+                <h2>Latest Updates for UK Care Workers (July 2025)</h2>
+                
+                <div class="latest-update">
+                    <p><strong>Last Updated:</strong> July 14, 2025</p>
+                </div>
+                
+                <div class="guide-section" onclick="toggleGuide(this)">
+                    <h3>Immigration Rule Changes - Effective July 22, 2025</h3>
+                    <div class="guide-content">
+                        <p>Major immigration reforms affecting the care sector have been announced, with significant changes coming into effect from July 22, 2025:</p>
+                        
+                        <ul>
+                            <li>The Care Worker visa route will close for new applicants from abroad</li>
+                            <li>The salary threshold for general skilled workers is increasing from £38,700 to £41,700</li>
+                            <li>The salary threshold for most Health and Care Visa holders remains at £25,000</li>
+                            <li>Those already sponsored as Care Workers before July 22, 2025 can still renew visas until July 2028</li>
+                        </ul>
+                        
+                        <p>These changes will significantly impact recruitment strategies for care providers, who will need to focus more on domestic recruitment and retention.</p>
+                        
+                        <p>Source: <a href="https://www.nhsemployers.org/articles/immigration-rule-changes-july-2025" target="_blank">NHS Employers</a> and <a href="https://www.gov.uk/government/news/major-immigration-reforms-delivered-to-restore-order-and-control" target="_blank">UK Government</a></p>
+                    </div>
+                </div>
+                
+                <div class="guide-section" onclick="toggleGuide(this)">
+                    <h3>Minimum Salary Requirements for Care Workers</h3>
+                    <div class="guide-content">
+                        <p>Since April 9, 2025, the minimum salary requirements for sponsored care workers have increased:</p>
+                        
+                        <ul>
+                            <li>From £23,200 per annum (£11.90 per hour) to £25,000 per annum (£12.82 per hour)</li>
+                            <li>This applies to all newly sponsored care workers and when renewing certificates of sponsorship</li>
+                            <li>This change aligns with the increase to National Minimum Wage from April 2025 to £12.21 per hour for those aged 21 and over</li>
+                        </ul>
+                        
+                        <p>Source: <a href="https://www.stephens-scown.co.uk/immigration/immigration-changes-2025-what-does-this-mean-for-the-care-sector/" target="_blank">Stephens Scown LLP</a></p>
+                    </div>
+                </div>
+                
+                <div class="guide-section" onclick="toggleGuide(this)">
+                    <h3>Care Sector Statistics 2025</h3>
+                    <div class="guide-content">
+                        <p>Current statistics highlighting the challenges in the care sector:</p>
+                        
+                        <ul>
+                            <li>The adult social care sector in the UK has a vacancy rate of approximately 8%</li>
+                            <li>In 2024, around 40% of new recruits in the adult social care sector were from overseas</li>
+                            <li>The sector is now required to prioritize recruiting from the displaced pool of workers in the UK before looking overseas</li>
+                        </ul>
+                        
+                        <p>These statistics emphasize the growing importance of domestic recruitment and retention strategies in the care sector.</p>
+                        
+                        <p>Source: <a href="https://www.fragomen.com/insights/uk-government-ends-overseas-recruitment-for-care-workers-a-bold-new-direction.html" target="_blank">Fragomen</a></p>
+                    </div>
+                </div>
+                
+                <a href="#" class="download-btn" onclick="printContent('updates-tab')">Download Latest Updates</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2025 Care Worker's Resource Hub | All rights reserved</p>
+            <p>This resource is designed to support care professionals in their career development</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Tab functionality
+        function openTab(tabId) {
+            // Hide all tab contents
+            const tabContents = document.getElementsByClassName('tab-content');
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove('active');
+            }
+            
+            // Deactivate all tab buttons
+            const tabButtons = document.getElementsByClassName('tab-button');
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove('active');
+            }
+            
+            // Show the selected tab content and activate the button
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+        
+        // Question toggle functionality
+        function toggleQuestion(element) {
+            element.classList.toggle('active');
+        }
+        
+        // Guide section toggle functionality
+        function toggleGuide(element) {
+            element.classList.toggle('active');
+        }
+        
+        // Print functionality
+        function printContent(elementId) {
+            const printContents = document.getElementById(elementId).innerHTML;
+            const originalContents = document.body.innerHTML;
+            
+            document.body.innerHTML = `
+                <div style="padding: 20px;">
+                    <h1 style="color: #487ac9; text-align: center; margin-bottom: 30px;">Care Worker's Resource Hub</h1>
+                    ${printContents}
+                </div>
+            `;
+            
+            window.print();
+            document.body.innerHTML = originalContents;
+            
+            // Reattach event listeners after printing
+            const tabButtons = document.getElementsByClassName('tab-button');
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].addEventListener('click', function() {
+                    openTab(this.getAttribute('onclick').match(/'(.*?)'/)[1]);
+                });
+            }
+            
+            const questions = document.getElementsByClassName('question');
+            for (let i = 0; i < questions.length; i++) {
+                questions[i].addEventListener('click', function() {
+                    toggleQuestion(this);
+                });
+            }
+
+const guideSections = document.getElementsByClassName('guide-section');
+            for (let i = 0; i < guideSections.length; i++) {
+                guideSections[i].addEventListener('click', function() {
+                    toggleGuide(this);
+                });
+            }
+            
+            // Reactivate the correct tab
+            document.getElementById(elementId).classList.add('active');
+            const activeTabButton = document.querySelector(`.tab-button[onclick="openTab('${elementId}')"]`);
+            if (activeTabButton) {
+                activeTabButton.classList.add('active');
+            }
+        }
+        
+        // Initialize any elements that should start expanded
+        document.addEventListener('DOMContentLoaded', function() {
+            // You could set specific questions or guide sections to start expanded here
+            // For example:
+            // document.querySelector('.question').classList.add('active');
+        });
+    </script>
+</body>
+</html>
